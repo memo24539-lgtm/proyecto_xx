@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barbería profesional. Cortes, estilos y reservaciones.">
+    <title>BLACK ELITE | Barber Shop</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">BLACK <span>ELITE</span></a>
+
+            <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#citas">Reservar cita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INICIO -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="subtitle">ESTILO · PRECISIÓN · PERSONALIDAD</p>
+                <h1>BLACK <span>ELITE</span></h1>
+                <h2>TU ESTILO, TU IDENTIDAD.</h2>
+                <p>
+                    Más que un corte, una experiencia.
+                    Encuentra el estilo que habla por ti.
+                </p>
+
+                <a href="#citas" class="btn">RESERVAR CITA</a>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section class="section" id="servicios">
+            <p class="section-subtitle">LO QUE HACEMOS</p>
+            <h2 class="section-title">NUESTROS SERVICIOS</h2>
+
+            <div class="services-container">
+                <article class="service-card">
+                    <h3>Corte clásico</h3>
+                    <p>Un estilo limpio y elegante para cualquier ocasión.</p>
+                    <span>$100 MXN</span>
+                </article>
+
+                <article class="service-card">
+                    <h3>Fade / Degradado</h3>
+                    <p>Degradado moderno con acabados precisos.</p>
+                    <span>$130 MXN</span>
+                </article>
+
+                <article class="service-card">
+                    <h3>Corte + barba</h3>
+                    <p>Un servicio completo para renovar tu imagen.</p>
+                    <span>$180 MXN</span>
+                </article>
+
+                <article class="service-card">
+                    <h3>Arreglo de barba</h3>
+                    <p>Perfilado y arreglo para mantener tu estilo.</p>
+                    <span>$80 MXN</span>
+                </article>
+            </div>
+
+            <p class="note">
+                *Precios de ejemplo. Cámbialos por los precios reales de la barbería.
+            </p>
+        </section>
+
+        <!-- GALERÍA -->
+        <section class="section gallery-section" id="galeria">
+            <p class="section-subtitle">NUESTRO TRABAJO</p>
+            <h2 class="section-title">GALERÍA DE CORTES</h2>
+
+            <div class="gallery-container">
+                <figure class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+                         alt="Interior de barbería">
+                    <figcaption>Estilo clásico</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+                         alt="Trabajo de barbería">
+                    <figcaption>Fade moderno</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
+                         alt="Herramientas de barbería">
+                    <figcaption>Detalles y precisión</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- RESERVACIONES -->
+        <section class="section booking-section" id="citas">
+            <p class="section-subtitle">AGENDA TU VISITA</p>
+            <h2 class="section-title">RESERVA TU CITA</h2>
+
+            <form id="booking-form" class="booking-form">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+                <label for="telefono">Tu teléfono</label>
+                <input type="tel" id="telefono" placeholder="Tu número de contacto"
+                       pattern="[0-9 +()-]{10,}" required>
+
+                <label for="servicio">Selecciona un servicio</label>
+                <select id="servicio" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Corte clásico - $100">Corte clásico - $100</option>
+                    <option value="Fade / Degradado - $130">Fade / Degradado - $130</option>
+                    <option value="Corte + barba - $180">Corte + barba - $180</option>
+                    <option value="Arreglo de barba - $80">Arreglo de barba - $80</option>
+                </select>
+
+                <label for="fecha">Fecha de la cita</label>
+                <input type="date" id="fecha" required>
+
+                <label for="hora">Hora preferida</label>
+                <select id="hora" required>
+                    <option value="">Selecciona una hora</option>
+                    <option value="10:00">10:00 a. m.</option>
+                    <option value="11:00">11:00 a. m.</option>
+                    <option value="12:00">12:00 p. m.</option>
+                    <option value="13:00">1:00 p. m.</option>
+                    <option value="14:00">2:00 p. m.</option>
+                    <option value="15:00">3:00 p. m.</option>
+                    <option value="16:00">4:00 p. m.</option>
+                    <option value="17:00">5:00 p. m.</option>
+                    <option value="18:00">6:00 p. m.</option>
+                </select>
+
+                <label for="comentario">Comentario (opcional)</label>
+                <textarea id="comentario" rows="3"
+                          placeholder="¿Algún detalle que debamos saber?"></textarea>
+
+                <button type="submit" class="btn submit-btn">
+                    ENVIAR RESERVACIÓN POR WHATSAPP
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <h2>BLACK <span>ELITE</span></h2>
+        <p>Tu estilo, tu identidad.</p>
+        <p class="copyright">© 2026 BLACK ELITE BARBER SHOP</p>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a class="whatsapp-btn" id="whatsapp-link"
+       href="https://wa.me/527226155280"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+        WhatsApp
+    </a>
+
+    <script src="funciones.js"></script>
+</body>
+</html>

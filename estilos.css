@@ -1,0 +1,367 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --negro: #101010;
+    --gris: #1c1c1c;
+    --dorado: #c9a45c;
+    --blanco: #ffffff;
+    --texto: #cccccc;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+/* NAVEGACIÓN */
+.header {
+    background: #080808;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.footer span,
+.hero h1 span {
+    color: var(--dorado);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--dorado);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* PORTADA */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=85");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitle,
+.section-subtitle {
+    color: var(--dorado);
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 9vw, 85px);
+    letter-spacing: 8px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--texto);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--dorado);
+    color: #111;
+    padding: 15px 28px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* SECCIONES */
+.section {
+    padding: 85px 7%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+
+/* SERVICIOS */
+.services-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: var(--gris);
+    padding: 35px 25px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--dorado);
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: var(--dorado);
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.service-card p {
+    color: var(--texto);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-card span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.note {
+    margin-top: 25px;
+    color: #999;
+    font-size: 13px;
+}
+
+/* GALERÍA */
+.gallery-section {
+    background: #171717;
+}
+
+.gallery-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    background: var(--gris);
+    border: 1px solid #333;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-item figcaption {
+    padding: 17px;
+    color: var(--dorado);
+    font-weight: bold;
+}
+
+/* FORMULARIO */
+.booking-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+    background: var(--gris);
+    text-align: left;
+    border: 1px solid #333;
+}
+
+.booking-form label {
+    display: block;
+    margin: 18px 0 8px;
+    color: var(--dorado);
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 13px;
+    background: #101010;
+    border: 1px solid #444;
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: 1px solid var(--dorado);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* PIE DE PÁGINA */
+.footer {
+    background: #080808;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #333;
+}
+
+.footer h2 {
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: var(--texto);
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    background: #25d366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px #0008;
+}
+
+/* DISEÑO PARA CELULARES */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 22px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        letter-spacing: 4px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .booking-form {
+        padding: 22px;
+    }
+}
